@@ -879,10 +879,7 @@ impl State {
             self.current_cursor_icon = Some(cursor_icon);
 
             if let Some(winit_cursor_icon) = translate_cursor(cursor_icon) {
-                window.set_cursor_visible(true);
                 window.set_cursor_icon(winit_cursor_icon);
-            } else {
-                window.set_cursor_visible(false);
             }
         } else {
             // Remember to set the cursor again once the cursor returns to the screen:
